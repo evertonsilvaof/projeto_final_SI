@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}Editar Termo{% endblock %}
+{% block content %}
+<h2>Editar Termo: {{ termo }}</h2>
+<form method="post">
+    <label>Definição:</label><br>
+    <textarea name="definicao" rows="4" cols="50">{{ definicao }}</textarea><br>
+    <button type="submit">Salvar</button>
+</form>
+{% endblock %}

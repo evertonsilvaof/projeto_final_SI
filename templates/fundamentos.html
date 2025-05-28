@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Fundamentos{% endblock %}
+{% block conteudo %}
+<h2>Fundamentos de Python</h2>
+
+<h3>1. Estruturas de Seleção</h3>
+<p>Permitem executar blocos de código com base em condições.</p>
+<pre><code>if x > 0:
+    print("Positivo")
+elif x < 0:
+    print("Negativo")
+else:
+    print("Zero")</code></pre>
+
+<h3>2. Estruturas de Repetição</h3>
+<p>Permitem repetir blocos de código.</p>
+<pre><code>for i in range(5):
+    print(i)</code></pre>
+
+<h3>3. Vetores e Matrizes</h3>
+<pre><code>vetor = [1, 2, 3]
+matriz = [[1, 2], [3, 4]]</code></pre>
+
+<h3>4. Funções e Procedimentos</h3>
+<pre><code>def saudacao(nome):
+    print(f"Olá, {nome}!")</code></pre>
+
+<h3>5. Tratamento de Exceções</h3>
+<pre><code>try:
+    num = int(input("Digite um número: "))
+except ValueError:
+    print("Entrada inválida!")</code></pre>
+{% endblock %}

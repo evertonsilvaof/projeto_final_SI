@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Dicionário{% endblock %}
+{% block conteudo %}
+<h2>Dicionário de Termos</h2>
+<ul>
+    {% for termo, definicao in termos.items() %}
+    <li><strong>{{ termo }}</strong>: {{ definicao }}
+        <a href="{{ url_for('editar', termo=termo) }}">[Editar]</a>
+        <a href="{{ url_for('deletar', termo=termo) }}">[Excluir]</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Adicionar Novo Termo</h3>
+<form method="post" action="{{ url_for('adicionar') }}">
+    <input type="text" name="termo" placeholder="Termo" required>
+    <input type="text" name="definicao" placeholder="Definição" required>
+    <button type="submit">Adicionar</button>
+</form>
+{% endblock %}

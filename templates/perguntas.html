@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Perguntas{% endblock %}
+{% block conteudo %}
+<h2>Faça sua Pergunta</h2>
+<form method="post">
+    <input type="text" name="pergunta" placeholder="Digite sua pergunta sobre Python" required>
+    <button type="submit">Enviar</button>
+</form>
+
+{% if resposta %}
+<h3>Resposta:</h3>
+<p>{{ resposta }}</p>
+{% endif %}
+{% endblock %}
